@@ -361,3 +361,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+.vscode/launch.json
+.vscode/settings.json
+.vscode/tasks.json
+LAB5/program.dSYM/Contents/Info.plist
+LAB5/program.dSYM/Contents/Resources/Relocations/aarch64/program.yml
+LAB5/program.dSYM/Contents/Resources/DWARF/program
+LAB5/program
