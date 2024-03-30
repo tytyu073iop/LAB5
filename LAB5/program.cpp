@@ -1,9 +1,9 @@
 #include "KSet.h"
 
-template <typename T>
-long find(KSet<T>* set, T num) {
-    auto it = set->begin();
-    for (long i = 0; it != set->end();it.forward()) {
+template <typename T, typename U>
+long find(U begin, U end, T num) {
+    auto it = begin;
+    for (long i = 0; it != end;it.forward()) {
         if (it.get() == num) {
             return i;
         }
@@ -26,10 +26,10 @@ struct Psint {
     Psint(int i) : i(i) {}
 };
 
-template <typename T>
-long find2(KSet<T>* set, T num) {
-    auto it = set->begin();
-    for (int i = 0; it != set->end();i++, it++) {
+template <typename T, typename U>
+long find2(U begin, U end, T num) {
+    auto it = begin;
+    for (int i = 0; it != end;i++, it++) {
         if (*it == num) {
             return i;
         }
@@ -41,9 +41,9 @@ template <typename T>
 void testKset() {
     {
         KSet<T> set({T(0),T(3),T(5),T(6),T(8),T(1)});
-        std::cout << find(&set, T(3)) << std::endl;
-        std::cout << find2(&set, T(3)) << std::endl;
-        std::cout << find(&set, T(4)) << std::endl;
+        std::cout << find(set.begin(), set.end(), T(3)) << std::endl;
+        std::cout << find2(set.begin(), set.end(), T(3)) << std::endl;
+        std::cout << find(set.begin(), set.end(), T(4)) << std::endl;
         // test inside
         KSet<T> s1;
         s1 >> 2 >> 5 >> 0;
