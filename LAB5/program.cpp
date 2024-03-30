@@ -41,9 +41,11 @@ template <typename T>
 void testKset() {
     {
         KSet<T> set({T(0),T(3),T(5),T(6),T(8),T(1)});
+        std::vector v{"aba", "baba", "coc"};
         std::cout << find(set.begin(), set.end(), T(3)) << std::endl;
         std::cout << find2(set.begin(), set.end(), T(3)) << std::endl;
         std::cout << find(set.begin(), set.end(), T(4)) << std::endl;
+        std::cout << find2(v.begin(), v.end(), "coc") << std::endl;
         // test inside
         KSet<T> s1;
         s1 >> 2 >> 5 >> 0;
